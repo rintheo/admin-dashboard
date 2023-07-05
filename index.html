@@ -5,23 +5,27 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Dashboard</title>
   <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
 </head>
 <body>
   <div class="site-container">
+
     <nav class="sidebar">
       <h1>Dashboard</h1>
       <ul>
-        <li>Home</li>
-        <li>Profile</li>
-        <li>Messages</li>
-        <li>History</li>
-        <li>Tasks</li>
-        <li>Communities</li>
+        <li><a href="">Home</a></li>
+        <li><a href="">Profile</a></li>
+        <li><a href="">Messages</a></li>
+        <li><a href="">History</a></li>
+        <li><a href="">Tasks</a></li>
+        <li><a href="">Communities</a></li>
       </ul>
       <ul>
-        <li>Settings</li>
-        <li>Support</li>
-        <li>Privacy</li>
+        <li><a href="">Settings</a></li>
+        <li><a href="">Support</a></li>
+        <li><a href="">Privacy</a></li>
       </ul>
     </nav>
 
@@ -33,32 +37,34 @@
               type="search"
               name="search"
               id="search"
-              class="search" >
+              class="search-box" >
           </form>
         </div>
         <div class="header-top-right">
           <div class="notification">🔔</div>
-          <div class="profile-picture">👤</div>
-          <p class="user-name">John Titor</p>
+          <div id="user-profile-picture">👤</div>
+          <p id="user-name"><a href="">John Titor</a></p>
         </div>
       </div>
       <div class="header-bottom">
         <div class="header-bottom-left">
-          <div class="profile-picture">👤</div>
-          <p>Hi there,</p>
-          <p>John Titor (@TimeTravel_0)</p>
+          <div id="user-profile-picture">👤</div>
+          <div class="user-name-greetings">
+            <p id="user-greetings">Hi there,</p>
+            <p id="user-name">John Titor <span class="user-handler">(@TimeTravel_0)</span></p>
+          </div>
         </div>
         <div class="header-bottom-right">
-          <button id="newButton">New</button>
-          <button id="uploadButton">Upload</button>
-          <button id="shareButton">Share</button>
+          <button id="newButton" class="header-button">New</button>
+          <button id="uploadButton" class="header-button">Upload</button>
+          <button id="shareButton" class="header-button">Share</button>
         </div>
       </div>
     </header>
 
     <main class="main-content">
       <div class="projects">
-        <h2>Your Projects</h2>
+        <h2 class="main-content-header">Your Projects</h2>
         <div class="container">
           <div class="project-card">
             <h3>TimeWarp</h3>
@@ -116,51 +122,63 @@
           </div>
         </div>
       </div>
-      <div class="announcements">
-        <h2>Announcements</h2>
-        <div class="announcements-card">
-          <div class="border">
-            <div class="announcement">
-              <h4>Upcoming Site Maintenance</h4>
-              <p> During this time, we'll be implementing various enhancements and optimizations to improve your browsing experience...</p>
-            </div>
-            <div class="announcement">
-              <h4>Introducing the Innovation Hub</h4>
-              <p>We're thrilled to introduce the Innovation Hub, a dedicated space on our website where passionate individuals can connect, collaborate, and share their groundbreaking ideas...</p>
-            </div>
-            <div class="announcement">
-              <h4>Privacy Policy Update</h4>
-              <p>To ensure the utmost protection of your personal information, we have updated our privacy policy with enhanced security measures. These measures include...</p>
+      <aside>
+        <div class="announcements">
+          <h2 class="main-content-header">Announcements</h2>
+          <div class="announcements-card">
+            <div class="border">
+              <div class="announcement">
+                <h4>Upcoming Site Maintenance</h4>
+                <p> During this time, we'll be implementing various enhancements and optimizations to improve your browsing experience...</p>
+              </div>
+              <div class="announcement">
+                <h4>Introducing the Innovation Hub</h4>
+                <p>We're thrilled to introduce the Innovation Hub, a dedicated space on our website where passionate individuals can connect, collaborate, and share their groundbreaking ideas...</p>
+              </div>
+              <div class="announcement">
+                <h4>Privacy Policy Update</h4>
+                <p>To ensure the utmost protection of your personal information, we have updated our privacy policy with enhanced security measures. These measures include...</p>
+              </div>
             </div>
           </div>
         </div>
-      </div>
-      <div class="trending">
-        <h2>Trending</h2>
-        <div class="trending-card">
-          <div class="trend">
-            <div id="trend-profile-picture-1">👤</div>
-            <h5 id="trend-handler-1">@NeuroTech</h5>
-            <p id="trend-project-1">Neural Net Genius</p>
-          </div>
-          <div class="trend">
-            <div id="trend-profile-picture-2">👤</div>
-            <h5 id="trend-handler-2">@scifiMan987</h5>
-            <p id="trend-project-2">Interstellar Warp Drive</p>
-          </div>
-          <div class="trend">
-            <div id="trend-profile-picture-3">👤</div>
-            <h5 id="trend-handler-3">@themadscientist</h5>
-            <p id="trend-project-3">Bio Fusion</p>
-          </div>
-          <div class="trend">
-            <div id="trend-profile-picture-4">👤</div>
-            <h5 id="trend-handler-4">@QuantumTech</h5>
-            <p id="trend-project-4">Quantum Vision</p>
+        <div class="trending">
+          <h2 class="main-content-header">Trending</h2>
+          <div class="trending-card">
+            <div class="trend">
+              <div id="trend-profile-picture-1">👤</div>
+              <div class="trend-handler-project">
+                <h5 id="trend-handler-1">@NeuroTech</h5>
+                <p id="trend-project-1">Neural Net Genius</p>
+              </div>
+            </div>
+            <div class="trend">
+              <div id="trend-profile-picture-2">👤</div>
+              <div class="trend-handler-project">
+                <h5 id="trend-handler-2">@scifiMan987</h5>
+                <p id="trend-project-2">Interstellar Warp Drive</p>
+              </div>
+            </div>
+            <div class="trend">
+              <div id="trend-profile-picture-3">👤</div>
+              <div class="trend-handler-project">
+                <h5 id="trend-handler-3">@themadscientist</h5>
+                <p id="trend-project-3">Bio Fusion</p>
+              </div>
+            </div>
+            <div class="trend">
+              <div id="trend-profile-picture-4">👤</div>
+              <div class="trend-handler-project">
+                <h5 id="trend-handler-4">@QuantumTech</h5>
+                <p id="trend-project-4">Quantum Vision</p>
+              </div>
+            </div>
           </div>
         </div>
-      </div>
+      </aside>
+
     </main>
+
   </div>
 </body>
 </html>
