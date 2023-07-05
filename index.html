@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="site-container">
+    <nav class="sidebar">
+      <h1>Dashboard</h1>
+      <ul>
+        <li>Home</li>
+        <li>Profile</li>
+        <li>Messages</li>
+        <li>History</li>
+        <li>Tasks</li>
+        <li>Communities</li>
+      </ul>
+      <ul>
+        <li>Settings</li>
+        <li>Support</li>
+        <li>Privacy</li>
+      </ul>
+    </nav>
+
+    <header class="header">
+      <div class="header-top">
+        <div class="header-top-left">
+          <form action="">
+            <input 
+              type="search"
+              name="search"
+              id="search"
+              class="search" >
+          </form>
+        </div>
+        <div class="header-top-right">
+          <div class="notification">🔔</div>
+          <div class="profile-picture">👤</div>
+          <p class="user-name">John Titor</p>
+        </div>
+      </div>
+      <div class="header-bottom">
+        <div class="header-bottom-left">
+          <div class="profile-picture">👤</div>
+          <p>Hi there,</p>
+          <p>John Titor (@TimeTravel_0)</p>
+        </div>
+        <div class="header-bottom-right">
+          <button id="newButton">New</button>
+          <button id="uploadButton">Upload</button>
+          <button id="shareButton">Share</button>
+        </div>
+      </div>
+    </header>
+
+    <main class="main-content">
+      <div class="projects">
+        <h2>Your Projects</h2>
+        <div class="container">
+          <div class="project-card">
+            <h3>TimeWarp</h3>
+            <p>TimeWarp is a groundbreaking programming language that enables developers to write code that manipulates time. With its intuitive syntax and powerful features, programmers can create applications that navigate through time, simulate historical events, and explore temporal possibilities...</p>
+            <div class="card-buttons">
+              <button class="star-button">⭐</button>
+              <button class="watch-button">👁️</button>
+              <button class="fork-button">🔱</button>
+            </div>
+          </div>
+          <div class="project-card">
+            <h3>QuantumTech</h3>
+            <p>QuantumTech is a cutting-edge technology that harnesses the principles of quantum mechanics to revolutionize computing. This project aims to develop a scalable and reliable quantum computing platform that opens up new frontiers in cryptography, optimization, and scientific simulations...</p>
+            <div class="card-buttons">
+              <button class="star-button">⭐</button>
+              <button class="watch-button">👁️</button>
+              <button class="fork-button">🔱</button>
+            </div>
+          </div>
+          <div class="project-card">
+            <h3>Multiverse Explorer</h3>
+            <p>Multiverse Explorer is an immersive virtual reality experience that allows users to explore and interact with parallel realities. By utilizing advanced algorithms and data visualization techniques, this project offers a mind-bending journey through diverse multiverses, revealing infinite possibilities...</p>
+            <div class="card-buttons">
+              <button class="star-button">⭐</button>
+              <button class="watch-button">👁️</button>
+              <button class="fork-button">🔱</button>
+            </div>
+          </div>
+          <div class="project-card">
+            <h3>TimeHopper</h3>
+            <p>TimeHopper is a next-generation gaming console that leverages time travel technology to transport gamers into historical eras. With its ultra-realistic graphics, seamless gameplay, and immersive storytelling, TimeHopper delivers an unparalleled gaming experience that blurs the boundaries of time...</p>
+            <div class="card-buttons">
+              <button class="star-button">⭐</button>
+              <button class="watch-button">👁️</button>
+              <button class="fork-button">🔱</button>
+            </div>
+          </div>
+          <div class="project-card">
+            <h3>NanoTech</h3>
+            <p>NanoTech is an ambitious project that combines nanotechnology and robotics to develop a fleet of nanorobots capable of targeted drug delivery, disease detection, and cellular repair. These microscopic marvels hold the potential to transform the field of medicine, offering personalized and minimally invasive treatments...</p>
+            <div class="card-buttons">
+              <button class="star-button">⭐</button>
+              <button class="watch-button">👁️</button>
+              <button class="fork-button">🔱</button>
+            </div>
+          </div>
+          <div class="project-card">
+            <h3>Cosmic Gateway</h3>
+            <p>Cosmic Gateway is a collaborative endeavor that aims to unravel the secrets of the universe through advanced telescopes and space exploration missions. By capturing breathtaking images, collecting celestial data, and fostering scientific discoveries, this project enables us to venture deeper into the cosmos...</p>
+            <div class="card-buttons">
+              <button class="star-button">⭐</button>
+              <button class="watch-button">👁️</button>
+              <button class="fork-button">🔱</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="announcements">
+        <h2>Announcements</h2>
+        <div class="announcements-card">
+          <div class="border">
+            <div class="announcement">
+              <h4>Upcoming Site Maintenance</h4>
+              <p> During this time, we'll be implementing various enhancements and optimizations to improve your browsing experience...</p>
+            </div>
+            <div class="announcement">
+              <h4>Introducing the Innovation Hub</h4>
+              <p>We're thrilled to introduce the Innovation Hub, a dedicated space on our website where passionate individuals can connect, collaborate, and share their groundbreaking ideas...</p>
+            </div>
+            <div class="announcement">
+              <h4>Privacy Policy Update</h4>
+              <p>To ensure the utmost protection of your personal information, we have updated our privacy policy with enhanced security measures. These measures include...</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="trending">
+        <h2>Trending</h2>
+        <div class="trending-card">
+          <div class="trend">
+            <div id="trend-profile-picture-1">👤</div>
+            <h5 id="trend-handler-1">@NeuroTech</h5>
+            <p id="trend-project-1">Neural Net Genius</p>
+          </div>
+          <div class="trend">
+            <div id="trend-profile-picture-2">👤</div>
+            <h5 id="trend-handler-2">@scifiMan987</h5>
+            <p id="trend-project-2">Interstellar Warp Drive</p>
+          </div>
+          <div class="trend">
+            <div id="trend-profile-picture-3">👤</div>
+            <h5 id="trend-handler-3">@themadscientist</h5>
+            <p id="trend-project-3">Bio Fusion</p>
+          </div>
+          <div class="trend">
+            <div id="trend-profile-picture-4">👤</div>
+            <h5 id="trend-handler-4">@QuantumTech</h5>
+            <p id="trend-project-4">Quantum Vision</p>
+          </div>
+        </div>
+      </div>
+    </main>
+  </div>
+</body>
+</html>
