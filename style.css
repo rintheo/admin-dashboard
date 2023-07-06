@@ -42,7 +42,7 @@ a {
 
 .sidebar {
     grid-area: sidebar;
-    background: var(--color-main);
+    background-color: var(--color-main);
     color: var(--color-light);
     padding: 1.5rem;
     font-weight: 600;
@@ -64,7 +64,7 @@ a {
 
 .header {
     grid-area: header;
-    background: var(--color-light);
+    background-color: var(--color-light);
     display: grid;
     gap: 1rem;    
     padding: 1.5rem 2rem 1rem 2rem;
@@ -79,7 +79,7 @@ a {
 }
 
 .header-top-left .search-box {
-    background: var(--color-background);
+    background-color: var(--color-background);
     height: 1.5rem;
     width: 100%;
     max-width: 600px;
@@ -107,14 +107,30 @@ a {
 #trend-profile-picture-3, 
 #trend-profile-picture-4 {
     place-self: stretch;
-    /* below are placeholder for profile picture */
-    background: var(--color-background);
-    box-shadow: inset 1px 1px 1px var(--color-background-shadow);
     border-radius: 50%;
-    text-align: center;
-    vertical-align: middle;
-    display: grid;
-    place-items: center;
+    background-color: var(--color-background);
+    background-size: cover;
+    background-position: center;
+}
+
+#user-profile-picture {
+    background-image: url(images/userpp000.jpeg);
+}
+
+#trend-profile-picture-1 {
+    background-image: url(images/userpp001.jpeg);
+}
+
+#trend-profile-picture-2 {
+    background-image: url(images/userpp002.jpeg);
+}
+
+#trend-profile-picture-3 {
+    background-image: url(images/userpp003.jpeg);
+}
+
+#trend-profile-picture-4 {
+    background-image: url(images/userpp004.jpeg);
 }
 
 .header-bottom {
@@ -169,7 +185,7 @@ a {
 
 .main-content {
     grid-area: main-content;
-    background: var(--color-background);
+    background-color: var(--color-background);
     display: grid;
     grid-template-columns: 2fr 1.5fr;
     grid-template-areas: 
@@ -197,7 +213,7 @@ a {
 .project-card,
 .announcements-card,
 .trending-card {
-    background: var(--color-light);
+    background-color: var(--color-light);
     border-radius: 0.5rem;
     box-shadow: 3px 3px 3px var(--color-background-shadow);
     padding: 1.5rem 1rem;
@@ -239,23 +255,27 @@ a {
     gap: 1.5rem;
 }
 
-.border {
-    display: grid;
-    gap: 1px;
-    background-color: lightgrey;
-}
-
 .announcement {
-    padding: 0.5rem;
     background-color: var(--color-light);
+    padding: 0.5rem 0;
+    border-bottom: 1px solid lightgrey;
 }
 
-.announcement > h4 {
+.announcement:first-child {
+    padding-top: 0;
+}
+
+.announcement:last-child {
+    padding-bottom: 0;
+    border: none;
+}
+
+.announcement h4 {
     font-size: 0.8rem;
     margin-bottom: 0.25rem;
 }
 
-.announcement > p {
+.announcement p {
     font-size: 0.7rem;
     color: grey;
 }
