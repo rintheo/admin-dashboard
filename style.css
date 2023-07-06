@@ -1,9 +1,11 @@
 :root {
     --color-main: #22c55e;
+    --color-main-light: #25d766;
     --color-light: #f8fffa;
     --color-complement: #C52289;
     --color-background: #e3ece5;
     --color-background-shadow: #b7c0ba;
+    --color-link: #2b77c3;
 }
 
 *,
@@ -28,6 +30,10 @@ ul, ol, li {
 a {
     text-decoration: none;
     color: inherit;
+}
+
+a:hover {
+    color: var(--color-link);
 }
 
 .site-container {
@@ -60,6 +66,11 @@ a {
 
 .sidebar li {
     margin-bottom: 1rem;
+}
+
+.sidebar a:hover {
+    text-decoration: underline;
+    color: white;
 }
 
 .header {
@@ -101,11 +112,8 @@ a {
 }
 
 .notification,
-#user-profile-picture,
-#trend-profile-picture-1, 
-#trend-profile-picture-2, 
-#trend-profile-picture-3, 
-#trend-profile-picture-4 {
+.user-profile-picture,
+.trend-profile-picture {
     place-self: stretch;
     border-radius: 50%;
     background-color: var(--color-background);
@@ -113,8 +121,12 @@ a {
     background-position: center;
 }
 
-#user-profile-picture {
+.user-profile-picture {
     background-image: url(images/userpp000.jpeg);
+}
+
+.user-profile-picture:hover ~ p {
+    color: var(--color-link);
 }
 
 #trend-profile-picture-1 {
@@ -149,12 +161,12 @@ a {
     font-weight: 600;
 }
 
-.header-bottom-left #user-greetings {
+.header-bottom-left .user-greetings {
     font-size: 0.65rem;
     margin-bottom: 0.2rem;
 }
 
-.header-bottom-left #user-name {
+.header-bottom-left .user-name {
     font-size: 1.1rem;
 }
 
@@ -176,18 +188,18 @@ a {
 }
 
 .header-button:hover {
-    background-color: #1fb155;
+    background-color: var(--color-main-light);
 }
 
 .header-button:active {
-    background-color: #25d766;
+    background-color: var(--color-main);
 }
 
 .main-content {
     grid-area: main-content;
     background-color: var(--color-background);
     display: grid;
-    grid-template-columns: 2fr 1.5fr;
+    grid-template-columns: 3fr minmax(250px, 1fr);
     grid-template-areas: 
         'projects aside';
     gap: 1rem;
@@ -222,7 +234,22 @@ a {
 .project-card {
     display: grid;
     border-left: 0.5rem solid var(--color-complement);
+    transition: 0.1s;
+    position: relative;
 }
+
+/* Add a content before on absolute position to contain */
+/* the whole card and spread the href */
+
+.project-card a:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -0.5rem;
+    right: 0;
+    bottom: 0;
+}
+
 
 .project-card > h3 {
     font-size: 1rem;
@@ -232,6 +259,18 @@ a {
 .project-card > p {
     font-size: 0.8rem;
     color: grey;
+}
+
+.project-card:hover {
+    transform: scale(1.01);
+    box-shadow: 0 0 0 1px var(--color-complement), 
+                3px 3px 3px var(--color-background-shadow);
+    cursor: pointer;
+    color: var(--color-link);
+}
+
+.project-card:active {
+    opacity: 0.5;
 }
 
 .card-buttons {
@@ -256,9 +295,9 @@ a {
 }
 
 .announcement {
-    background-color: var(--color-light);
-    padding: 0.5rem 0;
+    padding: 1rem 0.25rem;
     border-bottom: 1px solid lightgrey;
+    transition: 0.1s;
 }
 
 .announcement:first-child {
@@ -280,9 +319,30 @@ a {
     color: grey;
 }
 
+.announcement:hover {
+    color: var(--color-link)
+}
+
+/* Add a content before on absolute position to contain */
+/* the whole card and spread the href */
+
+.announcement .container {
+    position: relative;
+}
+
+.announcement a::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
 .trending-card {
     display: grid;
     gap: 1rem;
+    justify-content: start; 
 }
 
 .trend {
@@ -304,4 +364,55 @@ a {
 .trend-handler-project > p {
     font-size: 0.65rem;
     color: grey;
+}
+
+.trend > .trend-handler-project:hover a,
+.trend-profile-picture:hover + .trend-handler-project > h5,
+.trend-profile-picture:hover + .trend-handler-project > p {
+    color: var(--color-link); 
+}
+
+.not-found-container {
+    display: grid;
+    place-content: center;
+    justify-items: center;
+    height: 100vh;
+    width: 100vw;
+    background-color: var(--color-main);
+    color: var(--color-light);
+}
+
+.not-found-container h1 {
+    font-size: 10rem;
+}
+
+.not-found-container h2 {
+    font-size: 2rem;
+    margin-top: -2rem;
+    margin-bottom: 2rem;
+}
+
+.not-found-container p {
+    font-weight: 500;
+    margin-bottom: 5rem;
+}
+
+.not-found-container button {
+    background-color: var(--color-light);
+    color: var(--color-main);
+    font-size: 1.25rem;
+    font-weight: 500;
+    border: none;
+    border-radius: 3rem;
+    padding: .65rem 2.25rem;
+}
+
+.not-found-container button:hover {
+    background-color: var(--color-background);
+    color: var(--color-main-light);
+}
+
+.not-found-container button:active {
+    background-color: var(--color-light);
+    color: var(--color-main);
 }
