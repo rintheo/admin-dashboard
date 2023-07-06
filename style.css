@@ -42,7 +42,7 @@ a:hover {
     grid-template-areas:  
         'sidebar header'
         'sidebar main-content' ;
-    min-height: 100vh;
+    height: 100vh;
 }
 
 .sidebar {
@@ -232,6 +232,7 @@ a:hover {
         'projects aside';
     gap: 1rem;
     padding: 2rem 1rem;
+    overflow-y: scroll;
 }
 
 .main-content-header {
