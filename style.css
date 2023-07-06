@@ -355,6 +355,16 @@ a:hover {
 .trend-handler-project {
     display: grid;
     align-content: center;
+    position: relative;
+}
+
+.trend-handler-project a::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
 }
 
 .trend-handler-project > h5 {
@@ -367,7 +377,7 @@ a:hover {
     color: grey;
 }
 
-.trend > .trend-handler-project:hover a,
+.trend > .trend-handler-project:hover p,
 .trend-profile-picture:hover + .trend-handler-project > h5,
 .trend-profile-picture:hover + .trend-handler-project > p {
     color: var(--color-link); 
