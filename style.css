@@ -290,6 +290,18 @@ a:hover {
     margin-bottom: 0.25rem;
 }
 
+.preview {
+    background: var(--color-background-shadow);
+    height: 125px;
+    margin: 0.5rem 0;
+}
+
+.preview img {
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+}
+
 .project-card > p {
     font-size: 0.8rem;
     color: grey;
